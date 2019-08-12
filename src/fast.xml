@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fast>
+<config>
+<item name="permissClassName" comment="权限实现类">com.hhkj.framework.jwfm.permiss.JwfmPermiss</item>
+</config>
+<actionProc>
+	<info>在Action处理前的预处理类，需要继承IFastProcess接口，此处处理文件上传目录的统一设置</info>
+	<item>com.hhkj.framework.jwfm.proc.MisProcess</item>
+</actionProc>
+<modules>
+	<item uri="/main/index" name="登录及主界面" version="2017-08-01"><![CDATA[P4J[/@'MQJI,\Y9RYUV1AU\<S4[H"=K?I1>H62YRF@`Q->BG1\!Y;P%~?&2$[.A8298!XPT3U&./9.,CAQ$XBP'Y*^71^4(QX*ES/>XU~4^3P)V;@'TA4=~"9@Z?\L&1(T=QI9Q0\782N4YXQ*.)J+KHO9`ZF=)@RK5Q%I~~,%D2`#!ESS=7<E&0GI%V8UQ"=)~WPUA-)I4\N^!BA<+*_7V'))#UDGJ!R(!5~E~*-C#'(E'F/Y6+%GT7$K4%9,<BCD2,LBBI=-NAM1U3B@INF=VN15@>^E5-4\"J\X[ZUH)0B'%.=&9!?*5I\9OMO>M5XWK0\M&0FUY;&_2CFGLO%Q5")VCV"Y71)3PH^./BH:M[*S0C_).`1-?~8M:~W$O8)@*75E!8@>VIX!OZG5`=`-UM`-Q.+JV$-Y/:U8,AM1I8~=HN)KJ%IBEY!-1W%&%_(1%^1XX(P;FRAU>1_U1,A-+5YC1#:2.\)-7QXLPE.B+&`HY[SM58YI8`S!H%`7"::4Q`Y<)MXKQW^*UU4B9-*F7W=GE<N`"K.8R>YMBTYGA3J~B;%WDOZST3AUYQ/#,R&<YD+`UH=;&8OGAH=9)8Q#3'Z<SSA@YH+#7VLH"UV9:;GW&L7,Y@N2CNHL*_Y~0'.@FV5KQHM.%4&'F(**#!QZM$BVUFDAQR9!>^`RA:PI,R~52()6!&Q%YSU3W~+E=M3M!(M&P,`-),+IB25(\/V!)2/R_*XJ\95F`7,UUH<`Y)LKJIX3Z'M1U/$>$(C!E)RUGLWO>/,#I9I#`&#349A+%-UE#XM8&,F(I?\!Q[/'O'4%(+*8`/MDX$M87`L*.VH91%6-A)P.81=)-2X>,_%\F-DE$;>:)-_<2XQAUE)T$+1TYEK=/<T85L#Z!@[,YE8,`Q4~D1"6-01Y0(~6*%5YO50?;AU65N-2>$O~5A8QZ1Z?)8*=Y;TQU3._\75P_=>^^T?22YVE[+USR0C!MX.XVII_C#VM"(Q;=I#(GR9#BF5`'~9L>YWAIJ,E=*_:~Q9S_7OR/RQMX[K;I>/)I<=8MB<JLK7_!)VPK^B.<K"UA\^!IO&`J-+E2#9MS/<^@>=*='08))V2II>I6(T;YB35Q5!+@^7'P3EM._SL$\,X+<E2W>F^8W=C?99R+!@3FF&-%]]></item>
+
+</modules>
+<macrovalue>
+	<info>宏定义值可以使用在SQL查询的参数定义、业务表的默认值、查询条件和独立界面的${}变量中，不能用在Jsp原生El表达式中</info>
+	<info>默认值实现类必须实现IMacroValueGenerator接口，多个默认值可对应一个类</info>
+	<item code="uuid" name="生成32位随机字符串">com.dx.jwfm.framework.core.parser.CommonMacroValue</item>
+	<item code="nowDate" name="生成当天的日期对象，0点0分0秒">com.dx.jwfm.framework.core.parser.CommonMacroValue</item>
+	<item code="nowTime" name="生成当前的时间对象，包含时分秒">com.dx.jwfm.framework.core.parser.CommonMacroValue</item>
+	<item code="curUserId" name="当前登录用户对象">com.hhkj.framework.jwfm.macro.MisMacroValues</item>
+	<item code="curUserName" name="当前登录用户的姓名">com.hhkj.framework.jwfm.macro.MisMacroValues</item>
+	<item code="curDepId" name="当前登录用户所在部门ID">com.hhkj.framework.jwfm.macro.MisMacroValues</item>
+	<item code="curDepName" name="当前登录用户所在部门名称">com.hhkj.framework.jwfm.macro.MisMacroValues</item>
+	<item code="curOrgId" name="当前登录用户所在单位ID 段，车间，工区">com.hhkj.framework.jwfm.macro.MisMacroValues</item>
+	<item code="curOrgName" name="当前登录用户所在单位名称 段，车间，工区">com.hhkj.framework.jwfm.macro.MisMacroValues</item>
+	<item code="curOrgFlag" name="当前登录用户所在单位级别 2集团3路局5段6车间7工区">com.hhkj.framework.jwfm.macro.MisMacroValues</item>
+</macrovalue>
+<regedit-default>
+<item name="searchPageHeader">&lt;script type="text/javascript" src="/mis/common/jwfmjs.jsp"&gt;&lt;/script&gt;</item>
+<item name="editPageHeader"></item>
+<item name="viewPageHeader"></item>
+
+</regedit-default>
+</fast>
